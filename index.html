@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eatfit Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Why Eatfit?</a></li>
+          <li><a href="#">Visit Eatfit</a></li>
+        </ul>
+      </nav>
+      <div id="cart-container" onclick="openCart()">
+        Cart: <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="logo">Eatfit Blog</div>
+
+  <div class="category-menu">
+    <button class="active" onclick="filterBlogs('featured')">Featured</button>
+    <button onclick="filterBlogs('health-diet')">Health & Diet</button>
+    <button onclick="filterBlogs('meal-plans')">Meal Plans</button>
+    <button onclick="filterBlogs('drinks')">Drinks</button>
+  </div>
+
+  <section class="blog-posts" id="blog-list">
+    <div class="blog-grid">
+      <!-- Example Blogs -->
+      <div class="blog-card" data-category="featured">
+        <img src="images/paratha.jpg" alt="Paratha Love">
+        <h3>Paratha Love: Unveiling the Magic of Stuffed Flatbreads</h3>
+        <p>The very mention of paratha can bring about a sense of homeliness...</p>
+        <a href="#" class="read-more" data-post-id="paratha">READ MORE</a>
+      </div>
+
+      <div class="blog-card" data-category="health-diet">
+        <img src="images/dalkhicdi.jpg" alt="Dal Khichdi">
+        <h3>Best Dal Khichdi Recipes for a Hearty and Comforting Meal</h3>
+        <p>Dal Khichdi is a classic comfort food—simple, tasty, and healthy. Check out these ideas...</p>
+        <a href="#" class="read-more" data-post-id="dalkhichdi">READ MORE</a>
+      </div>
+
+      <div class="blog-card" data-category="meal-plans">
+        <img src="images/biryani.jpg" alt="Biryani">
+        <h3>Non-Veg: Boneless Biryani is the Perfect Food</h3>
+        <p>Biryani lovers, rejoice! Enjoy the flavors without the bones...</p>
+        <a href="#" class="read-more" data-post-id="biryani">READ MORE</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Eatfit Blog</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
