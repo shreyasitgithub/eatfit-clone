@@ -28,7 +28,7 @@ function openModal(postId, postTitle, postContent) {
     <h3>${postTitle}</h3>
     <p>${postContent}</p>
     <button onclick="addToCart('${postTitle}')">Add to Cart</button>
-  `;
+    `;
   modal.style.display = 'flex';
 }
 
